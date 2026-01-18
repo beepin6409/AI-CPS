@@ -1,0 +1,6 @@
+=== AI training summary ===
+epochs_run: 50
+final_loss: 0.45681989192962646
+final_accuracy: 0.8241406083106995
+final_val_loss: 0.46172019839286804
+final_val_accuracy: 0.8237500190734863
