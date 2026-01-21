@@ -1,0 +1,33 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  churn   R-squared:                       0.189
+Model:                            OLS   Adj. R-squared:                  0.188
+Method:                 Least Squares   F-statistic:                     413.3
+Date:                Sun, 18 Jan 2026   Prob (F-statistic):               0.00
+Time:                        17:40:04   Log-Likelihood:                -9109.0
+No. Observations:               16000   AIC:                         1.824e+04
+Df Residuals:                   15990   BIC:                         1.831e+04
+Df Model:                           9                                         
+Covariance Type:            nonrobust                                         
+====================================================================================
+                       coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------
+const                0.2446      0.016     15.473      0.000       0.214       0.276
+tenure              -0.1489      0.030     -4.926      0.000      -0.208      -0.090
+monthly_charges      0.3888      0.024     16.543      0.000       0.343       0.435
+total_charges        0.0291      0.048      0.601      0.548      -0.066       0.124
+contract            -0.1314      0.005    -28.912      0.000      -0.140      -0.122
+payment_method      -0.0004      0.003     -0.133      0.894      -0.006       0.006
+internet_service     0.0015      0.005      0.284      0.776      -0.009       0.012
+tech_support        -0.2094      0.007    -29.466      0.000      -0.223      -0.196
+online_security      0.0062      0.007      0.906      0.365      -0.007       0.020
+support_calls        0.5934      0.022     26.920      0.000       0.550       0.637
+==============================================================================
+Omnibus:                     2413.907   Durbin-Watson:                   1.990
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1371.839
+Skew:                           0.582   Prob(JB):                    1.28e-298
+Kurtosis:                       2.161   Cond. No.                         42.9
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

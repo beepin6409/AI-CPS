@@ -1,0 +1,4 @@
+=== OLS Performance Indicators ===
+            MSE       MAE        R2
+TRAIN  0.182821  0.372467  0.188728
+TEST   0.176804  0.365211  0.210690
