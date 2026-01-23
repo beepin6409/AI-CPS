@@ -3,8 +3,8 @@
 Dep. Variable:                  churn   R-squared:                       0.189
 Model:                            OLS   Adj. R-squared:                  0.188
 Method:                 Least Squares   F-statistic:                     413.3
-Date:                Sun, 18 Jan 2026   Prob (F-statistic):               0.00
-Time:                        17:40:04   Log-Likelihood:                -9109.0
+Date:                Fri, 23 Jan 2026   Prob (F-statistic):               0.00
+Time:                        01:14:35   Log-Likelihood:                -9109.0
 No. Observations:               16000   AIC:                         1.824e+04
 Df Residuals:                   15990   BIC:                         1.831e+04
 Df Model:                           9                                         
