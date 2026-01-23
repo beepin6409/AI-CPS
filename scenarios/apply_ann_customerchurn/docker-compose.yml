@@ -1,0 +1,22 @@
+version: "3.9"
+
+volumes:
+  ai_system:
+    external: true
+
+services:
+
+  knowledgebase:
+    image: knowledgebase_customer_churn_ann
+    volumes:
+      - ai_system:/tmp
+
+  activationbase:
+    image: activationbase_customer_churn
+    volumes:
+      - ai_system:/tmp
+
+  codebase:
+    image: codebase_customer_churn
+    volumes:
+      - ai_system:/tmp

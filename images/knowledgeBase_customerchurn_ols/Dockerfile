@@ -1,7 +1,13 @@
 FROM busybox:latest
 
-RUN mkdir -p /tmp/knowledgeBase
+# Safe internal directory (NOT /tmp)
+WORKDIR /model
 
-COPY models/customer_churn/ols/currentOlsSolution.pkl /tmp/knowledgeBase/currentSolution.pkl
+# Copy OLS model into image
+COPY models/customer_churn/ols/currentOlsSolution.pkl /model/currentOlsSolution.pkl
 
+# Copy image-specific README (required)
 COPY images/knowledgeBase_customerchurn_ols/README.md /
+
+# At container START, inject model into shared volume
+CMD ["sh", "-c", "mkdir -p /tmp/knowledgeBase && cp /model/currentOlsSolution.pkl /tmp/knowledgeBase/"]

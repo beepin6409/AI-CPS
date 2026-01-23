@@ -11,4 +11,6 @@ RUN pip install --no-cache-dir \
 
 COPY images/codeBase_customerchurn/run_inference.py .
 
+COPY images/codeBase_customerchurn/README.md /
+
 CMD ["python", "run_inference.py"]

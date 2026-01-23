@@ -17,13 +17,13 @@ def main():
     files = os.listdir(KB_PATH)
 
     if any(f.endswith(".keras") for f in files):
-        model_path = os.path.join(KB_PATH, "currentSolution.keras")
+        model_path = os.path.join(KB_PATH, "currentAiSolution.keras")
         model = tf.keras.models.load_model(model_path)
         preds = model.predict(X).flatten()
         print("ANN predictions:", preds)
 
     elif any(f.endswith(".pkl") for f in files):
-        model_path = os.path.join(KB_PATH, "currentSolution.pkl")
+        model_path = os.path.join(KB_PATH, "currentOlsSolution.pkl")
         with open(model_path, "rb") as f:
             model = pickle.load(f)
 
