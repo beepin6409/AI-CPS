@@ -132,14 +132,20 @@ docker volume create ai_system
 docker-compose -f scenarios/apply_ann_customerchurn/docker-compose.yml up
 Expected Output:
 
+```bash
 ANN predictions: [0.18...]
+```
 Running the OLS Inference Scenario
+```bash
 docker volume create ai_system
 
 docker-compose -f scenarios/apply_ols_customerchurn/docker-compose.yml up
+```
 Expected Output:
+```bash
 
 OLS predictions: [0.23...]
+```
 Technical Stack
 Python 3.10
 
