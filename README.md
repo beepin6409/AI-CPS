@@ -55,8 +55,8 @@ All runtime interaction between components is realized using a **shared Docker v
 ## Repository Structure
 
 AI-CPS/
-│
-├── code/
+│                                                                                                
+├── code/                                                          
 │ └── customer_churn_prediction/
 │ ├── ann_model.py
 │ ├── ols_model.py
@@ -130,6 +130,7 @@ Running the ANN Inference Scenario
 docker volume create ai_system
 
 docker-compose -f scenarios/apply_ann_customerchurn/docker-compose.yml up
+```
 Expected Output:
 
 ```bash
@@ -146,7 +147,7 @@ Expected Output:
 
 OLS predictions: [0.23...]
 ```
-Technical Stack
+## Technical Stack
 Python 3.10
 
 TensorFlow / Keras
@@ -161,7 +162,7 @@ BusyBox
 
 The system is platform-independent and executable on any Docker-supported environment.
 
-Reproducibility
+## Reproducibility
 The project is fully reproducible using:
 
 Public GitHub repository
@@ -172,5 +173,5 @@ Version-controlled Docker Compose scenarios
 
 No local model training or configuration is required to run inference.
 
-License
+## License
 This project is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
