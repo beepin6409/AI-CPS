@@ -50,49 +50,49 @@ The project strictly follows the AI-CPS paradigm by separating AI system compone
 
 All runtime interaction between components is realized using a **shared Docker volume** (`ai_system`) mounted to `/tmp`.
 
----
 
 ## Repository Structure
 
+```text
 AI-CPS/
-│                                                                                                
-├── code/                                                          
-│ └── customer_churn_prediction/
-│ ├── ann_model.py
-│ ├── ols_model.py
-│ └── diagnostic_plots.py
+│
+├── code/
+│   └── customer_churn_prediction/
+│       ├── ann_model.py
+│       ├── ols_model.py
+│       └── diagnostic_plots.py
 │
 ├── data/
-│ └── customer-churn-dataset/
-│ ├── processed/
-│ │ ├── training_data.csv
-│ │ ├── test_data.csv
-│ │ └── activation_data.csv
-│ └── documentation/
+│   └── customer-churn-dataset/
+│       ├── processed/
+│       │   ├── training_data.csv
+│       │   ├── test_data.csv
+│       │   └── activation_data.csv
+│       └── documentation/
 │
 ├── models/
-│ └── customer_churn/
-│ ├── ann/
-│ │ └── currentAiSolution.keras
-│ └── ols/
-│ └── currentOlsSolution.pkl
+│   └── customer_churn/
+│       ├── ann/
+│       │   └── currentAiSolution.keras
+│       └── ols/
+│           └── currentOlsSolution.pkl
 │
 ├── images/
-│ ├── knowledgeBase_customerchurn_ann/
-│ ├── knowledgeBase_customerchurn_ols/
-│ ├── activationBase_customerchurn/
-│ └── codeBase_customerchurn/
+│   ├── knowledgeBase_customerchurn_ann/
+│   ├── knowledgeBase_customerchurn_ols/
+│   ├── activationBase_customerchurn/
+│   └── codeBase_customerchurn/
 │
 ├── scenarios/
-│ ├── apply_ann_customerchurn/
-│ │ └── docker-compose.yml
-│ └── apply_ols_customerchurn/
-│ └── docker-compose.yml
+│   ├── apply_ann_customerchurn/
+│   │   └── docker-compose.yml
+│   └── apply_ols_customerchurn/
+│       └── docker-compose.yml
 │
 └── README.md
 
+```
 
----
 
 ## Docker Images (Public)
 
