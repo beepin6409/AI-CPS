@@ -64,11 +64,18 @@ AI-CPS/
 │
 ├── data/
 │   └── customer-churn-dataset/
-│       ├── processed/
-│       │   ├── training_data.csv
-│       │   ├── test_data.csv
-│       │   └── activation_data.csv
-│       └── documentation/
+│       ├── raw/
+│       │   └── customer_churn.csv
+│       └── processed/
+│           ├── training_data.csv
+│           ├── test_data.csv
+│           ├── activation_data.csv
+│           └── joint_collection.csv
+│
+├── documentation/
+│   └── customer_churn/
+│       ├── ann/
+│       └── ols/
 │
 ├── models/
 │   └── customer_churn/
@@ -90,6 +97,8 @@ AI-CPS/
 │       └── docker-compose.yml
 │
 └── README.md
+```
+
 
 ```
 
