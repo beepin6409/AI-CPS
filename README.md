@@ -53,11 +53,15 @@ All runtime interaction between components is realized using a **shared Docker v
 
 ## Repository Structure
 
+## Repository Structure
+
 ```text
 AI-CPS/
 │
 ├── code/
 │   └── customer_churn_prediction/
+│       ├── data_scraping.py
+│       ├── data_preprocessing.py
 │       ├── ann_model.py
 │       ├── ols_model.py
 │       └── diagnostic_plots.py
@@ -85,19 +89,93 @@ AI-CPS/
 │           └── currentOlsSolution.pkl
 │
 ├── images/
-│   ├── knowledgeBase_customerchurn_ann/
-│   ├── knowledgeBase_customerchurn_ols/
-│   ├── activationBase_customerchurn/
-│   └── codeBase_customerchurn/
+│   └── customer_churn/
+│       ├── knowledgeBase_customerchurn_ann/
+│       │   ├── Dockerfile
+│       │   └── README.md
+│       │
+│       ├── knowledgeBase_customerchurn_ols/
+│       │   ├── Dockerfile
+│       │   └── README.md
+│       │
+│       ├── activationBase_customerchurn/
+│       │   ├── Dockerfile
+│       │   └── README.md
+│       │
+│       └── codeBase_customerchurn/
+│           ├── Dockerfile
+│           ├── README.md
+│           └── run_inference.py
 │
 ├── scenarios/
-│   ├── apply_ann_customerchurn/
-│   │   └── docker-compose.yml
-│   └── apply_ols_customerchurn/
-│       └── docker-compose.yml
+│   └── customer_churn/
+│       ├── apply_ann_customerchurn/
+│       │   └── docker-compose.yml
+│       └── apply_ols_customerchurn/
+│           └── docker-compose.yml
 │
 └── README.md
 ```
+## Repository Structure
+
+```text
+AI-CPS/
+│
+├── code/
+│   └── customer_churn_prediction/
+│       ├── data_scraping.py
+│       ├── data_preprocessing.py
+│       ├── ann_model.py
+│       ├── ols_model.py
+│       └── diagnostic_plots.py
+│
+├── data/
+│   └── customer-churn-dataset/
+│       ├── raw/
+│       │   └── customer_churn.csv
+│       └── processed/
+│           ├── training_data.csv
+│           ├── test_data.csv
+│           ├── activation_data.csv
+│           └── joint_collection.csv
+│
+├── documentation/
+│   └── customer_churn/
+│       ├── ann/
+│       └── ols/
+│
+├── models/
+│   └── customer_churn/
+│       ├── ann/
+│       │   └── currentAiSolution.keras
+│       └── ols/
+│           └── currentOlsSolution.pkl
+│
+├── images/
+│       ├── knowledgeBase_customerchurn_ann/
+│       │   ├── Dockerfile
+│       │   └── README.md
+│       │
+│       ├── knowledgeBase_customerchurn_ols/
+│       │   ├── Dockerfile
+│       │   └── README.md
+│       │
+│       ├── activationBase_customerchurn/
+│       │   ├── Dockerfile
+│       │   └── README.md
+│       │
+│       └── codeBase_customerchurn/
+│           ├── Dockerfile
+│           ├── README.md
+│           └── run_inference.py
+│
+├── scenarios/
+│       ├── apply_ann_customerchurn/
+│       │   └── docker-compose.yml
+│       └── apply_ols_customerchurn/
+│           └── docker-compose.yml
+│
+└── README.md
 
 
 ```
