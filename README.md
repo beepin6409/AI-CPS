@@ -188,6 +188,22 @@ BusyBox
 
 The system is platform-independent and executable on any Docker-supported environment.
 
+## Requirements
+
+### Hardware Requirements
+- x86_64 compatible system
+- Sufficient disk space for Docker images and volumes
+- Not compatible with ARM64 architectures (e.g. Apple Silicon / M1 / M2 / M3)
+
+### Software Requirements
+- Docker (version 20.10 or newer)
+- Docker Compose (v2 or newer)
+
+Note:
+This project was tested only on x86_64 systems.  
+ARM-based systems (such as Apple Silicon) are currently not supported due to
+library and Docker image compatibility issues.
+
 ## Reproducibility
 The project is fully reproducible using:
 
