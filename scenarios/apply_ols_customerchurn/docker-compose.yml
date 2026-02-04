@@ -7,16 +7,16 @@ volumes:
 services:
 
   knowledgebase:
-    image: knowledgebase_customer_churn_ols
+    image: beepin6409/knowledgebase_customer_churn_ols
     volumes:
       - ai_system:/tmp
 
   activationbase:
-    image: activationbase_customer_churn
+    image: beepin6409/activationbase_customer_churn
     volumes:
       - ai_system:/tmp
 
   codebase:
-    image: codebase_customer_churn
+    image: beepin6409/codebase_customer_churn
     volumes:
       - ai_system:/tmp
