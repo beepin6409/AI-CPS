@@ -50,49 +50,73 @@ The project strictly follows the AI-CPS paradigm by separating AI system compone
 
 All runtime interaction between components is realized using a **shared Docker volume** (`ai_system`) mounted to `/tmp`.
 
----
 
 ## Repository Structure
 
+
+
+```text
 AI-CPS/
-│                                                                                                
-├── code/                                                          
-│ └── customer_churn_prediction/
-│ ├── ann_model.py
-│ ├── ols_model.py
-│ └── diagnostic_plots.py
+│
+├── code/
+│   └── customer_churn_prediction/
+│       ├── data_scraping.py
+│       ├── data_preprocessing.py
+│       ├── ann_model.py
+│       ├── ols_model.py
+│       └── diagnostic_plots.py
 │
 ├── data/
-│ └── customer-churn-dataset/
-│ ├── processed/
-│ │ ├── training_data.csv
-│ │ ├── test_data.csv
-│ │ └── activation_data.csv
-│ └── documentation/
+│   └── customer-churn-dataset/
+│       ├── raw/
+│       │   └── customer_churn.csv
+│       └── processed/
+│           ├── training_data.csv
+│           ├── test_data.csv
+│           ├── activation_data.csv
+│           └── joint_collection.csv
+│
+├── documentation/
+│   └── customer_churn/
+│       ├── ann/
+│       └── ols/
 │
 ├── models/
-│ └── customer_churn/
-│ ├── ann/
-│ │ └── currentAiSolution.keras
-│ └── ols/
-│ └── currentOlsSolution.pkl
+│   └── customer_churn/
+│       ├── ann/
+│       │   └── currentAiSolution.keras
+│       └── ols/
+│           └── currentOlsSolution.pkl
 │
 ├── images/
-│ ├── knowledgeBase_customerchurn_ann/
-│ ├── knowledgeBase_customerchurn_ols/
-│ ├── activationBase_customerchurn/
-│ └── codeBase_customerchurn/
+│       ├── knowledgeBase_customerchurn_ann/
+│       │   ├── Dockerfile
+│       │   └── README.md
+│       │
+│       ├── knowledgeBase_customerchurn_ols/
+│       │   ├── Dockerfile
+│       │   └── README.md
+│       │
+│       ├── activationBase_customerchurn/
+│       │   ├── Dockerfile
+│       │   └── README.md
+│       │
+│       └── codeBase_customerchurn/
+│           ├── Dockerfile
+│           ├── README.md
+│           └── run_inference.py
 │
 ├── scenarios/
-│ ├── apply_ann_customerchurn/
-│ │ └── docker-compose.yml
-│ └── apply_ols_customerchurn/
-│ └── docker-compose.yml
+│       ├── apply_ann_customerchurn/
+│       │   └── docker-compose.yml
+│       └── apply_ols_customerchurn/
+│           └── docker-compose.yml
 │
 └── README.md
 
 
----
+```
+
 
 ## Docker Images (Public)
 
@@ -126,7 +150,9 @@ docker pull beepin6409/knowledgebase_customer_churn_ann
 docker pull beepin6409/knowledgebase_customer_churn_ols
 docker pull beepin6409/activationbase_customer_churn
 docker pull beepin6409/codebase_customer_churn
+```
 Running the ANN Inference Scenario
+```bash
 docker volume create ai_system
 
 docker-compose -f scenarios/apply_ann_customerchurn/docker-compose.yml up
