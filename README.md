@@ -150,7 +150,9 @@ docker pull beepin6409/knowledgebase_customer_churn_ann
 docker pull beepin6409/knowledgebase_customer_churn_ols
 docker pull beepin6409/activationbase_customer_churn
 docker pull beepin6409/codebase_customer_churn
+```
 Running the ANN Inference Scenario
+```bash
 docker volume create ai_system
 
 docker-compose -f scenarios/apply_ann_customerchurn/docker-compose.yml up
