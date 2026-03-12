@@ -6,6 +6,25 @@
 - **Paul Bakos**
 
 ---
+## Personal Contribution Note
+
+This project was developed as part of Advanced 
+AI-Based Application Systems at the University 
+of Potsdam (Prof. M. Grum) in collaboration 
+with Paul Bakos.
+
+**My contributions:**
+- Built ANN model (TensorFlow/Keras) for churn prediction
+- Built OLS baseline model (Statsmodels)
+- Implemented Docker containerization and Docker Compose orchestration
+- Structured AI-CPS component separation
+
+**Relevance to Financial Data Science:**
+Customer churn prediction is structurally identical 
+to credit default prediction — binary outcome 
+modeling with behavioral features, requiring both 
+interpretable (OLS) and powerful (ANN) approaches 
+deployed in production environments.
 
 ## Course Context
 
